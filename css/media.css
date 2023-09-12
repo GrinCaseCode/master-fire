@@ -1524,6 +1524,12 @@
 		padding: 0 15px;
 		padding-bottom: 20px;
 	}
+	.block-delivery .col-lg-7 .image-main {
+		margin-top: 0;
+	}
+	.page-delivery .form-page {
+		margin-top: 33px;
+	}
 }
 
 /* Extra Small Devices, Phones */
