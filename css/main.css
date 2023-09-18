@@ -164,13 +164,14 @@ form {
 	align-items: center;
 	justify-content: space-between;
 }
-.menu a {
+.menu > li > a {
 	padding: 19px 0;
 	font-weight: 600;
 	color: #fff;
-	display: block;
+	display: flex;
+	align-items: center;
 }
-.menu a:hover {
+.menu > li > a:hover {
 	color: #E76C19;
 }
 
@@ -574,6 +575,9 @@ form {
 }
 .slider-brands .slick-next {
 	right: -50px;
+}
+.process {
+	overflow: hidden;
 }
 .process-wrapper {
 	margin-left: -30px;
@@ -2324,3 +2328,123 @@ form {
 	height: 70px;
 	padding: 0 52px;
 } 
+.menu > li {
+	position: relative;
+}
+.menu-dropdown {
+	width: 369px;
+	box-shadow: 6px 4px 6px 0px rgba(0, 0, 0, 0.10);
+	top: 100%;
+	left: 0;
+	background-color: #F5F5F5;
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+}
+.menu-dropdown > ul > li > a {
+	font-size: 20px;
+	padding: 19px 29px;
+	border-bottom: 1px solid #D9D9D9;
+	font-weight: 600;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.subdropdown-menu {
+	width: 1097px;
+	padding: 20px 85px;
+	top: 0;
+	left: 100%;
+	background: #F5F5F5;
+	position: absolute;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+}
+.menu-dropdown__haschild:hover .subdropdown-menu {
+	visibility: visible;
+	opacity: 1;
+}
+.menu-dropdown > ul > li > a:hover,
+.menu-dropdown__haschild:hover > a {
+	color: #7F0909;
+}
+.subdropdown-menu__title {
+	font-size: 20px;
+	padding-bottom: 10px;
+	font-weight: 600;
+	color: #000;
+	position: relative;
+	display: block;
+}
+.subdropdown-menu__title::before {
+	position: absolute;
+	display: block;
+	content: " ";
+	width: 58px;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	background: #E76C19;
+}
+.subdropdown-menu__name {
+	margin-top: 20px;
+	margin-bottom: 2px;
+	color: #000;
+	font-weight: 600;
+	display: block;
+}
+.subdropdown-menu li {
+	margin-bottom: 5px;
+}
+.subdropdown-menu li a {
+	font-size: 14px;
+	color: #4D5252;
+}
+.subdropdown-menu__name:hover,
+.subdropdown-menu li a:hover {
+	color: #7F0909;
+}
+.menu-dropdown__haschild > a::after {
+	position: relative;
+	content: "\f054";
+	width: 24px;
+	height: 24px;
+	font-size: 13px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 700;
+}
+.menu__haschild > a::before {
+	position: relative;
+content: "\f0ca";
+	font-size: 15px;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 900;
+}
+.menu__haschild:hover .menu-dropdown {
+	visibility: visible;
+	opacity: 1;
+}

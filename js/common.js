@@ -315,6 +315,17 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 	 			$(this).toggleClass("active");
 	 			$(this).next(".footer__content").slideToggle(200);
 	 		}); 
+
+	 		$(".menu__haschild > a").click(function(e) {
+	 			e.preventDefault();
+	 			$(this).parent().toggleClass("active");
+	 			$(this).siblings(".menu-dropdown").slideToggle(200);
+	 		}); 
+	 		$(".menu-dropdown__haschild > a").click(function(e) {
+	 			e.preventDefault();
+	 			$(this).parent().toggleClass("active");
+	 			$(this).siblings(".subdropdown-menu").slideToggle(200);
+	 		}); 
 	 	}
 	 }
 

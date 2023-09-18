@@ -12,7 +12,7 @@
 	.social-list a {
 		font-size: 18px;
 	}
-	.menu a {
+	.menu > li > a {
 		padding: 13px 0;
 	}
 	.header-top {
@@ -628,6 +628,34 @@
 		max-width: 349px;
 		margin-bottom: 65px;
 	}
+	.menu-dropdown > ul > li > a {
+    font-size: 17px;
+    padding: 11px 15px;
+}
+.menu-dropdown {
+    width: 315px;
+    }
+    .menu-dropdown__haschild > a::after {
+    width: 21px;
+    height: 21px;
+    font-size: 10px;
+}
+.subdropdown-menu {
+    width: 825px;
+    padding: 14px 43px;
+    }
+    .subdropdown-menu__title {
+    	font-size: 17px;
+    }
+    .subdropdown-menu li a {
+    font-size: 13px;
+}
+.subdropdown-menu li {
+    margin-bottom: 3px;
+}
+.subdropdown-menu__name {
+    margin-top: 12px;
+    }
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -1021,6 +1049,23 @@
 		max-width: 304px;
 		margin-bottom: 35px;
 	}
+	.menu-dropdown > ul > li > a {
+    font-size: 15px;
+    padding: 8px 10px;
+}
+.menu-dropdown {
+    width: 265px;
+}
+.subdropdown-menu {
+    width: 630px;
+    padding: 14px 20px;
+}
+.subdropdown-menu__title {
+    font-size: 15px;
+}
+.subdropdown-menu li a {
+    font-size: 12px;
+}
 }
 
 /* Medium Devices, Desktops */
@@ -1215,10 +1260,9 @@
 	.menu {
 		display: block;
 	}
-	.menu a {
+	.menu > li > a {
 		color: #000;
 		border-bottom: 1px solid #000;
-		display: block;
 	}
 	.header-bottom__mobile {
 		display: block;
@@ -1376,6 +1420,44 @@
 	}
 	.page-thanks {
 		padding-top: 8px;
+	}
+	.menu-dropdown {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 1;
+		visibility: visible;
+		background: transparent;
+		box-shadow: none;
+		display: none;
+	}
+	.subdropdown-menu {
+		padding: 5px 15px;
+		width: 100%;
+		opacity: 1;
+		visibility: visible;
+		top: 0;
+		left: 0;
+		position: relative;
+		display: none;
+		background: transparent;
+	}
+	.subdropdown-menu__title {
+		margin-top: 10px;
+	}
+	.menu-dropdown__haschild > a::after {
+		transform: rotate(90deg);
+		transition: all 0.3s;
+	}
+	.menu-dropdown__haschild.active > a::after {
+		transform: rotate(270deg);
+	}
+	.menu > li > a:hover {
+		color: initial;
+	}
+	.menu__haschild.active > a {
+    color: #E76C19 !important;
 	}
 }
 
